@@ -1,0 +1,256 @@
+Create Kubernetes cluster on Azure portal 
+
+Make the vnet peering in virtual network links in private DNS zone in MC RG 
+
+Create Postgres server on Azure portal 
+
+Create Keyvault on Azure portal 
+
+Create SA storage account in RG 
+
+Agentpool managed identity should be given ACR pull role on the ACR - acrsredev 
+
+Create data and logs storage account in MC RG 
+
+Create key vault secrets 
+
+Create new CloudAMQP instance and create userVhost 
+
+Kured Installation 
+
+      helm repo add kured https://kubereboot.github.io/charts/ 
+
+      helm repo update 
+
+      kubectl apply -f kured-namespace.yaml 
+
+      helm upgrade --install kured kured/kured --namespace kured -f kured-values.yml --set nodeSelector."kubernetes\.io/os"=linux 
+
+Keda Installation 
+
+      helm repo add kedacore https://kedacore.github.io/charts 
+
+      helm repo update 
+
+      kubectl create namespace keda 
+
+      helm upgrade --install keda kedacore/keda --namespace keda --version 2.9 -f values-keda.yaml 
+
+Cm-install.yaml file 
+
+      helm repo add jetstack https://charts.jetstack.io  
+
+      helm repo update 
+
+  
+
+      #kubectl create namespace istio-system 
+
+      kubectl apply -f istio-system-namespace.yaml 
+
+  
+
+      #kubectl create namespace cert-manager 
+
+      kubectl apply -f cert-manager-namespace.yaml 
+
+      kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml  
+
+      helm upgrade --install cert-manager jetstack/cert-manager --namespace cert-manager  -f cert-manager-values.yaml --version v1.12.2 
+
+      kubectl apply -f certificate.yaml 
+
+      kubectl apply -f istio-csr-issuer.yaml 
+
+      kubectl get -n istio-system secret istio-ca -ogo-template='{{index .data "tls.crt"}}' | base64 -d > ca.pem 
+
+      openssl x509 -in ca.pem -noout -text 
+
+      kubectl create secret generic -n cert-manager istio-root-ca --from-file=ca.pem 
+
+      helm upgrade --install -n cert-manager cert-manager-istio-csr jetstack/cert-manager-istio-csr -f istio-csr-values.yaml --version v0.5.0 
+
+kubectl apply -f ignio-apps-namespace.yml 
+
+kubectl get namespace -L istio-injection 
+
+Now copy istio folder to the directory in the linux VM(zip and unzip in the machine unzip istio.zip) 
+
+sudo su - 
+
+cd /home/ravindra/istio/istio-1.15.0/ 
+
+chmod 777 istio-setup.sh 
+
+./istio-setup.sh 
+
+Now go outside root directory 
+
+sudo chmod +x /home/ravindra/istio/istio-1.15.0/bin/istioctl 
+
+yes | /home/ravindra/istio/istio-1.15.0/bin/istioctl install -f /home/ravindra/istio/istio-1.15.0/custom_install_options_dual.yaml            if uat is already there we have to mention the same ip as well as prod ip(select a unused IP from vnet) 
+
+  
+
+kubectl apply -f PeerAuthentication.yml 
+
+kubectl get peerauthentication --all-namespaces 
+
+  
+
+az storage account create -n platformakslogs -g MC_PlatformAKS_platformaks_centralindia --sku Standard_ZRS --tags "env=${env}-config" --enable-large-file-share 
+
+az storage account create -n platformaksdata -g MC_PlatformAKS_platformaks_centralindia --sku Standard_ZRS --tags "env=${env}-data" --enable-large-file-share 
+
+az storage account list -g MC_PlatformAKS_platformaks_centralindia --query [].name 
+
+  
+
+kubectl apply -f StorageClass-PROD-logs.yml 
+
+kubectl apply -f PersistentVolumeClaim-PROD-config.yml 
+
+kubectl apply -f StorageClass-PROD-data.yml 
+
+kubectl apply -f PersistentVolumeClaim-PROD-data.yml 
+
+  
+
+kubectl apply -f secureGateway-UAT.yaml 
+
+  
+
+kubectl apply -f VirtualServices.yml 
+
+  
+
+kubectl apply -f secretProviderClass.yml                                  clientID of the managed Identity of agentpool present in MC RG 
+
+  
+
+kubectl apply -f ServiceEntry.yml                 confirm with Ankita if proxy is needed to be changed here - confirmed with ankita and deleted file 
+
+Certificate installation 
+
+kubectl apply -f selfsigned-issuer.yaml 
+
+apiVersion: cert-manager.io/v1 
+
+kind: ClusterIssuer 
+
+metadata: 
+
+  name: selfsigned-issuer 
+
+spec: 
+
+  selfSigned: {} 
+
+  
+
+kubectl apply -f certificate2.yaml -n istio-system 
+
+apiVersion: cert-manager.io/v1 
+
+kind: Certificate 
+
+metadata: 
+
+  name: istio-ingress-credential 
+
+spec: 
+
+  commonName: '*.akstesting.com' 
+
+  isCA: true 
+
+  issuerRef: 
+
+    kind: ClusterIssuer 
+
+    name: selfsigned-issuer 
+
+  secretName: istio-ingress-credential 
+
+  
+
+kubectl apply -f certificate2.yaml -n platform 
+
+  
+
+Neo4j 
+
+kubectl apply -f neo4j-backup-storage.yml -n platform                                                          --encode the values to base64(echo $saname | base64 -w 0   //    echo $KEY | base64 -w 0) 
+
+kubectl apply -f neo4j-backup-storage-pv-uat.yml -n platform 
+
+helm repo add neo4j https://helm.neo4j.com/neo4j 
+
+helm repo update 
+
+kubectl apply -f certificate2.yaml -n platform                                    - apply istio-ingress-credential certificate in namespace as well  
+
+helm upgrade --install neo4j-standalone neo4j/neo4j-standalone -f neo4j-values-SA-final.yaml -n sit4 --version 4.4.13 
+
+  
+
+HDInsight Onboard                                        tenant id is same as vhost and hdi namespace 
+
+Run Install.jar file                                           tenant id should be same as vhost and hdi namespace 
+
+Aiopsconfig table in sa storage accout 
+
+  
+
+App deployment 
+
+Add details in aks-deployment-testing with all details 
+
+ 
+
+  
+
+ 
+
+  
+
+ 
+
+  
+
+ 
+
+  
+
+ 
+
+Go to designer and drag this in line and save the code 
+
+ 
+
+  
+
+Download the certificate from windows VM and update in backend setting in app gateway. 
+
+ 
+
+  
+
+App gateway configuration 
+
+  
+
+  
+
+  
+
+  
+
+Check if kinit is working or not 
+
+If not working - change the password of hdinisight user 
+
+Check if peering is in place with ADDS vnet and perftest02vnet - hdi cluster vnet 
+
+  
+
