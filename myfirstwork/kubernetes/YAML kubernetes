@@ -1,0 +1,89 @@
+In actually in kubernetes we have yaml is play most role because it was used as the input for creating the object in kubernetes  
+
+In this objects are pods nodes services deployments etc… 
+
+ 
+
+Api version 
+
+kind 
+
+ 
+
+V1 
+
+V1 
+
+Apps/v1 
+
+Apps/v1 
+
+POD         Service       ReplicaSet Deployment     
+
+ 
+
+Yaml is file that is used as input to create a object in kubernetes 
+
+It contains mainly four sections 
+
+1.apiVersion 
+
+2.kind 
+
+3.metadata 
+
+4.spec 
+
+ 
+
+Lets create yaml file for that  
+
+ 
+
+Name of the yaml file    pod-defination.yaml 
+
+apiVersion: v1             -> here it is write in string format 
+
+Kind: Pod                     ->   here it is also write in string format 
+
+Metadata:                   -> here we  write it in dictionary format and here it have parent and child in that 
+
+  name: my-pod app       
+
+  label:  
+
+    name: myapp 
+
+    type: front-end 
+
+Spec:                          -> here it is write in List/Arrya format it contains so many formats 
+
+   containers: 
+
+     -  name : nginx 
+
+        image:  nginx 
+
+ 
+
+ 
+
+To create  pod using yaml fole this command is used 
+
+ 
+
+Kubectl create -f pod-defination.yaml 
+
+ 
+
+ 
+
+To get the list pod use this command: 
+
+Kubectl get pods 
+
+ 
+
+To get the detailed about pod: 
+
+Kubect describe pod  {podname} 
