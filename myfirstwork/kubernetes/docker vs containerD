@@ -1,0 +1,35 @@
+Kubernetes introduce a CRI (container runtime interface) 
+
+OCI(open container initiative) it contains imagespec and runtimespec 
+
+ 
+
+ 
+
+ContainerD: 
+
+It is embedded as graduate status in CNCF 
+
+It used as the follwoing way to download it from their own portal 
+
+Ctr comes with containerD 
+
+Ctr commands uses in basic container activites pull image and run contianer and its is not use friendly  
+
+Nerdctl 
+
+Crictl 
+
+Url for reference: Mapping from dockercli to crictl | Kubernetes 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
