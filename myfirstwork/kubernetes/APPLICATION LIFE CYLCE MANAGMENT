@@ -1,0 +1,24 @@
+
+ 
+
+Here the scenario of the application  lifecycle management we have manage the application like pods , nodes cluster for the application for that purpose we have use the pods and etc there we  some time we have to update and delete and unupdate the updates because it was not working 
+
+ 
+
+Update the application by the two ways they are 
+
+Recreate : this means we have install the all updates by one time and to all the applications and the whole application was stoped when time of application was stopped then we have  loss the production or customers are facing the acces the apllication at the time of  we update 
+
+Rolling update :it is also update the application but here we can update the application by the way of one by one then  there is no application was stopped becuas the reaming applications were support to that application run  when the time of the while the application was updating 
+
+ 
+
+There is so much difference between  them because those first was recreation but here it was automatically do updating and simuntaneously they will running. 
+
+ 
+
+ 
+
+Update the image command: 
+
+Kubectl set image deploy name simpleweb=imageversion:234 
