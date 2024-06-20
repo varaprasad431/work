@@ -1,0 +1,31 @@
+Docker run command 
+
+Docker run command for linux 
+
+Docker Run Command 
+
+. The name of the image from which the container should be created is the only required argument for... 
+
+Run the Container in the Foreground 
+
+. By default, when no option is provided to the docker run command, the root... 
+
+Run the Container in Detached Mode 
+
+ 
+
+Docker ps  
+
+The docker ps command is used to list running containers and their unique container ID, image name, the command it is executing, time since it is running (uptime), and the ports it is using12. The command was created based on unix's ps command, where ps is an abbreviation for "process status"2. The command can be used to display stopped containers, filter the result or just display the container IDs1. Docker has used the naming convention of ps from Linux, where containers are actually running as a process on the Linux server3. 
+
+ 
+
+ 
+
+ 
+
+docker ps List containers For example uses of this command, refer to the examples section below. (runebook.dev) 
+
+ 
+
+ 
