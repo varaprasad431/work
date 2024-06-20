@@ -1,0 +1,23 @@
+Pod is generally called instance ,it is smallest thing in kubernets . It contain one or more containers on it. 
+
+Pod can run in docker by  this command 
+
+Docker run python app # here it is run a pod which name is python app 
+
+Docker run helper -link app1 # it is help to the above python app 
+
+ 
+
+Here we can deploy the pod by using this command 
+
+Kubectl run nginx  -- image nginx 
+
+ from above nginx is pod name and --image nginx source path whereit is located in docker hub 
+
+If it mention at that then it will be pull from the  docker hub 
+
+ 
+
+To get the list of the pods we should use this  command 
+
+Kubectl get pods 
