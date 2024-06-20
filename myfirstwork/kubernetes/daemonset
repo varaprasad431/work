@@ -1,0 +1,17 @@
+In kuberenets daemonset is similar to the replicaset here we can use this daemonset for the purpose of the duplicate pod  here the node can be created then the pod is  placed there then we have to maintain the duplicateset of the  pod it is maintained by the daemonset  
+
+The yaml file  of the replicaset and the daemonset are same 2  same but change will be happen at "kind" there was remove the replicaset and replace with the daemonset 
+
+ 
+
+k get daemonsets --all-namespaces 
+
+ 
+
+It is the command to check the daemonsets in the namespace clsuters 
+
+ 
+
+An easy way to create a DaemonSet is to first generate a YAML file for a Deployment with the command kubectl create deployment elasticsearch --image=registry.k8s.io/fluentd-elasticsearch:1.20 -n kube-system --dry-run=client -o yaml > fluentd.yaml. Next, remove the replicas, strategy and status fields from the YAML file using a text editor. Also, change the kind from Deployment to DaemonSet. 
+ 
+Finally, create the Daemonset by running kubectl create -f fluentd.yaml 
