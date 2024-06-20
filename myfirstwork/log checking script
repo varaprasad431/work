@@ -1,0 +1,169 @@
+This script appears to be a PowerShell script designed for automating certain tasks related to managing and retrieving logs from Kubernetes clusters. It interacts with the Kubernetes command-line tool (`kubectl`) to perform various actions. Let's break down its purpose and how it can be used: 
+
+  
+
+**Purpose of the Script:** 
+
+The main purpose of the script is to retrieve log files from Kubernetes pods within a specified time range and save them to a local directory on the machine running the script. It prompts the user for input regarding the namespace, component, start and end date, and then uses this information to retrieve and copy logs from relevant pods. 
+
+  
+
+**How to Use the Script:** 
+
+1. The script should be run within a PowerShell environment. 
+
+2. Upon running the script, it will prompt you to enter the following information: 
+
+   - Namespace: The Kubernetes namespace where the pods are located. 
+
+   - Component: The specific component or application within the namespace. 
+
+   - Start Date and Time: The beginning of the time range for log retrieval. 
+
+   - End Date and Time: The end of the time range for log retrieval. 
+
+3. Based on the component entered, the script uses `kubectl` commands to retrieve logs from the relevant pods within the specified time range. 
+
+4. The retrieved logs are copied to a local directory named `${component}_logs` (where `${component}` is the component entered) on the machine where the script is executed. 
+
+  
+
+**Script Overview:** 
+
+- The script starts by collecting user input for namespace, component, start date, and end date. 
+
+- It uses the `kubectl get scaledobject` command to retrieve scaling information for the specified component. 
+
+- It then retrieves the name of a log viewer pod from the namespace. 
+
+- If the component is either "jasper" or "ui," the script iterates over the replicas and performs the following steps: 
+
+  - Executes commands within the log viewer pod to copy relevant log files from each pod to a temporary directory. 
+
+  - Copies the log files from the temporary directory in the log viewer pod to a local directory. 
+
+  - Cleans up the temporary directory in the log viewer pod. 
+
+- If the component is not "jasper" or "ui," the script performs similar actions for the specified component. 
+
+- Finally, it prints a message indicating that the log directory has been created. 
+
+  
+
+**Notes:** 
+
+- The script assumes that you have `kubectl` and the necessary Kubernetes configuration set up on the machine where the script is executed. 
+
+- The script assumes that the log viewer pod and the specified component's pods are properly labeled with appropriate metadata. 
+
+- Make sure to test the script in a controlled environment before using it in a production setting. 
+
+  
+
+Remember that this script serves as a starting point and might need adjustments based on your specific Kubernetes setup and requirements. 
+
+ 
+
+ 
+
+ 
+
+Steps to configure rules for running scripts 
+
+  
+
+  
+
+1.Run Get-ExecutionPolicy 
+ 
+
+image
+  
+
+2.If the Output comes as Restricted then run: 
+ 
+Set-ExecutionPolicy RemoteSigned 
+ 
+ 
+Then select option [A] Yes to All 
+ 
+ 
+
+image
+  
+
+  
+
+3.Then Run : 
+ 
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser 
+ 
+ 
+ 
+Select option [A] Yes to All 
+ 
+ 
+
+ 
+ 
+4.Open the script file with the command: 
+ 
+          notepad .\<filename> 
+ 
+ 
+
+  
+
+5.The file will open up in notepad. 
+ 
+Replace all the .\kubectl with kubectl 
+ 
+ 
+Cntrl+H 
+ 
+ 
+
+  
+
+  
+
+6.Save the file and execute  the file 
+ 
+.\<filename> 
+ 
+Select option [R] Run Once 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+7.You will get a prompt to enter the namespace: 
+    Kindly enter the namespace for which you need to extract logs: 
+ 
+
+ 
+ 
+
+8.After entering the namespace and clicking on enter you will be prompted to enter the component name for which you need to extract the logs: 
+ 
+
+ 
+ 
+
+9.After proceeding with the component name you will be prompted to enter the start date and time in the format (yyyy-mm-dd hh:mm:ss): 
+
+  
+
+10.After proceeding with the start date and time you will be prompted to enter the end date and time in the format (yyyy-mm-dd hh:mm:ss): 
+ 
+
+11.A new folder will get created in the path where the script file is stored and it will contain all the log files of the selected component, pod wise. 
+ 
+
+ 
