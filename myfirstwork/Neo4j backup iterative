@@ -1,0 +1,23 @@
+First use the 
+
+Kubectl get jobs –n <NS> 
+
+Kubeclt get cj 
+
+Kubeclt logs jobs/<jobname> - n 
+
+Kubeclt describe job or cj 
+
+Kubectl get pvc  
+
+All are not workthen  
+
+kubectl create job --from=cronjob/<cronjob-name> <job-name> -n <namespace-name> 
+
+ 
+
+ 
+
+Abouve command is used for run a jobmannually 
+
+ 
