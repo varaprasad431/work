@@ -1,0 +1,63 @@
+ETCD is distributed reliable key-value store it is fast ,secure and reliable  
+
+ 
+
+ 
+
+Key-value store: 
+
+In etcd data is store as key-value pairs,where both the key and the value are strings. They keys are thr organized hierarchical in a key space, allowing for the creation of a structured namspace. 
+
+Each key value pair reperesentsa unique entry in store 
+
+In this it is useful for the address  the value or adding a value to they key and it is like dictinory from in the yaml or json file. 
+
+ 
+
+Installation of etcd 
+
+Download binaries 
+
+Exteaxt 
+
+Run etcd service 
+
+ 
+
+ 
+
+Creating and run the etcd by the following way 
+
+.etcd/   # it is the command of starting 
+
+.etcdctl  set key1 value1   # it is used to set data to store  
+
+ 
+
+If it starts it listens a service port number default is 2379. 
+
+ 
+
+If want to setup the etcd manuallt by using wget https://etcd/git/com it was for example only 
+
+Here we get the this one below 
+
+--advertise-clients--urls https://${internal-ip}:2379\\ 
+
+ 
+
+If you want setup your cluster by kubeadm it was deploye  the ETCD 
+
+ 
+
+Kubectl get pods -n kube-system 
+
+ 
+
+Kubectl exec etcd-master -nkube-system etcdctl get / --prefix -key only 
+
+ 
+
+ETCDCTL  is command line tool which is used to interact with the ETCD 
+
+ 
