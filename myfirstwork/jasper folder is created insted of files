@@ -1,0 +1,179 @@
+Issue Name: Application.properties, context.xml and js.quartz.properties are getting created as folder instead of files hence japser report server is not getting deployed. 
+
+Worked by: Varaprasad Katteboina. 
+
+Date and Time: 04/09/2023 01:00 PM. 
+
+Summary: application.properties, context.xml and js.quartz.properties are getting created as folder instead of files hence japser report server is not getting deployed. 
+
+Investigation steps:  
+>Log in to the aks and describe pod.then login into the jasper 
+>Look for error in side the jasper files 
+
+ 
+
+2020 
+2020 
+2020 
+2020 
+I z wxzwxzwx 
+10 
+—xr—x 
+—xr—x 
+—xr—x 
+—xr—x 
+—xr—x 
+—xr—x 
+—xr—x 
+—xr—x 
+2 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+r oot 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 an 10 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+r oot 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 gnło 
+1 an 10 
+26811 
+15705 
+110628 
+3056 
+31647 
+21255 
+10688 
+4096 
+4096 
+4096 
+4096 
+4096 
+4096 
+4096 
+4096 
+32768 
+Dec 
+Dec 
+Dec 
+Dec 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+Sep 
+sev 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+14 
+14 
+14 
+14 
+: 08 
+: 48 
+: 48 
+: 48 
+: 48 
+: 22 
+: 22 
+: 22 
+: 22 
+: 22 
+: 22 
+: 22 
+: 22 
+: 22 
+web . xmI 
+server—config . wsdd 
+j aspersezvez—sezvlet . xmI 
+cationContext . xmI 
+. qua z Cz 
+j s . config . propezties 
+appI cat i onCont ext — report — s chedul ing . xmI 
+appI cat i onCont — — se ces . xmI 
+appI cationContext . xmI 
+gzoovy 
+jpivot 
+flows 
+decoratozs 
+data 
+csi f 
+  
+
+Investigation steps we followed: 
+>Logged in to the asusw22testk3aks and get pods. 
+
+>Logged in to the jasper check the files and folders 
+
+>Found error : application.properties, context.xml and js.quartz.properties are getting created as folder instead of files hence japser report server is not getting deployed.(please refer screenshot for error 
+
+  
+
+>This error with Validate failed: We want files but here we found directory insted of files 
+ 
+ 
+
+RCA:If a directory is causing issues in your pipeline, first confirm its relevance and potential consequences before deletion. After backup and verification, deleting the directory might be a valid solution. 
+
+Resolution : 
+
+> Login into cluster asusw22testk3aks describe jasper note pvc or pv. which pvc it was attached. 
+
+>Go to the azure portal find logic app and ignio-upgrade-testing see the logic 
+
+>go to azure portal and find that PV or PVC in storage account 
+
+>In storage account at file share you find that directories delete that folders 
+
+>reRun the pipeline again it was resolved. 
+
+ 
