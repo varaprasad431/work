@@ -1,0 +1,562 @@
+Explain command: 
+
+kubectl explain command is used to show documentation about Kubernetes resources like pod. 
+
+ 
+
+From <https://www.bing.com/search?q=WHY+explain+command+used+in+kubernetes&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=why+explain+command+used+in+kubernetes&sc=6-38&sk=&cvid=94183BEC4DAC475FAD283CEB3DE74A97&ghsh=0&ghacc=0&ghpl=>  
+
+ 
+
+Kubectl explain pod | grep VERSION 
+
+ 
+
+Kubectl get pods  : it give the list of pods 
+
+ 
+
+Kubectl describe pod : it gives the detail view of the pod 
+
+ 
+
+ 
+
+Replicaset: 
+
+Kubectl create -f replicaset-definition.yaml 
+
+Kubectl get replicaset 
+
+Kubectl delete replicaset my-replicaset 
+
+Kubectl replace -f replicaset-definition.yaml 
+
+Kubctl scale -replicas=6 -f 
+
+ 
+
+ Use "kubectl api-resources" for a complete list of supported resources. 
+
+Kubectl api-resources 
+
+ 
+
+ 
+
+Kubectl create -f deployemnt-definition.yaml file 
+
+ k get  deployment 
+
+Kubectl get all : it gives all  like pods ,replicaset , deployements in cluster. 
+
+ 
+
+ 
+
+Create an NGINX Pod 
+
+kubectl run nginx --image=nginx 
+
+Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run) 
+
+kubectl run nginx --image=nginx --dry-run=client -o yaml 
+
+Create a deployment 
+
+kubectl create deployment --image=nginx nginx 
+
+Generate Deployment YAML file (-o yaml). Don't create it(--dry-run) 
+
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml 
+
+Generate Deployment YAML file (-o yaml). Don’t create it(–dry-run) and save it to a file. 
+
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml 
+
+Make necessary changes to the file (for example, adding more replicas) and then create the deployment. 
+
+kubectl create -f nginx-deployment.yaml 
+
+ 
+
+OR 
+
+In k8s version 1.19+, we can specify the --replicas option to create a deployment with 4 replicas. 
+
+kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml 
+
+ 
+
+From <https://tcsglobal.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14937836#overview> 
+
+ 
+
+Kubectl run --image=nginx   : it is used for creating a image 
+
+Kubectl create deployment --image=nginx nginx  : it is used to create a deployment using image 
+
+Kubectl expose deployment nginx --port   : it is used to expose the deployment  
+
+Kubectl   edit deployment nginx  : it is used to edit the deploy 
+
+Kubectl scale deployment  nginx -- replicas=6   : used to scale the replicas of particular deployment 
+
+Kubectl set image deployment nginx nginx=nginx:1.18     : used  to set image of deployemtns particular version 
+
+Kubectl  create -f nginx.yaml  : it used to create a pods ,replicaset,deployments etc using yaml file 
+
+Kubectl replace -f nginx,yaml  : it is used to edit the yaml file 
+
+Kubectl delete -f nginx.yaml   : it is used to delte the yaml 
+
+Kubectl lookup nginx.yaml   : it used to lookup 
+
+ 
+
+Nslookup (stands for “Name Server Lookup”) is a useful command for getting information from the DNS server. It is a network administration tool for querying the Domain Name System (DNS) to obtain domain name or IP address mapping or any other specific DNS record. It is also used to troubleshoot DNS-related problems.  
+
+Syntax of the `nslookup` command in Linux System 
+
+nslookup [option] [hosts] 
+
+ 
+
+Kubectl apply -f  nginx.yaml  : it is used create delte update the file. 
+
+ 
+
+Create 
+
+Update 
+
+Run  
+
+Create 
+
+Expose 
+
+Edit              
+
+ scale          
+
+Set 
+
+ 
+
+Kubectl replace -force 
+
+ 
+
+ 
+
+ 
+
+ 
+
+kubectl expose pod redis --port=6379 --name redis-service 
+
+ 
+
+From <https://1879ee65a5264049.labs.kodekloud.com/#/quiz/lab/4>  
+
+ 
+
+ k run httpd --image=httpd:alpine --port=80 --expose  # it is the command used for creating the pod along service alos with mentioned pod 
+
+ 
+
+ k run httpd --image=httpd:alpine --port=80    # but here it create only the pod so we can use that command incase of creating the pod and the command 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+List all pods: $ kubectl get pods. 
+
+Display the details of the pod with name <pod-name>: $ kubectl describe pods/<pod-name>. 
+
+Describe all pods: $  kubectl describe pods. 
+
+Display the details of the node with the name <node-name>: $ kubectl describe nodes <node-name>. 
+
+List all replication controllers and services together: $ kubectl get replicationcontroller,services <replication-ctrl name>. 
+
+Return a snapshot of the logs from pod <pod-name>: $ kubectl logs <pod-name>. 
+
+View logs from pod <pod-name> as they happen: $ kubectl logs -f <pod-name>. 
+
+Display Resource (CPU/Memory/Storage) usage: $ kubectl top. 
+
+ 
+
+Run the command: kubectl label node node01 color=blue 
+
+ 
+
+It is used as particular label. 
+
+ 
+
+ 
+
+NODE AFFINITY TYPES: 
+
+apiVersion:apps/v1kind:Deploymentmetadata:name:redspec:replicas:2selector:matchLabels:run:nginxtemplate:metadata:labels:run:nginxspec:containers:-image:nginximagePullPolicy:Alwaysname:nginxaffinity:nodeAffinity:requiredDuringSchedulingIgnoredDuringExecution:nodeSelectorTerms:-matchExpressions:-key:node-role.kubernetes.io/control-planeoperator:Exists 
+
+ 
+
+ 
+
+Then run kubectl create -f reddeploy.yaml 
+
+ 
+
+Kubectl get pods –selector app=app1 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Kubectl taint node node1 app=bluegreen:NoSchedule 
+
+ 
+
+ 
+
+Kubectl describe node masternode |grep taint 
+
+ 
+
+ 
+
+Kubectl label node node-name <label-key>=<label-value> 
+
+Kubectl label node node1 size=large 
+
+ 
+
+ 
+
+ 
+
+Why pod will not be edited in spec section after it running: 
+
+ 
+
+A quick note on editing Pods and Deployments 
+
+Edit a POD 
+
+Remember, you CANNOT edit specifications of an existing POD other than the below. 
+
+spec.containers[*].image 
+
+spec.initContainers[*].image 
+
+spec.activeDeadlineSeconds 
+
+spec.tolerations 
+
+For example you cannot edit the environment variables, service accounts, resource limits (all of which we will discuss later) of a running pod. But if you really want to, you have 2 options: 
+
+1. Run the kubectl edit pod <pod name> command.  This will open the pod specification in an editor (vi editor). Then edit the required properties. When you try to save it, you will be denied. This is because you are attempting to edit a field on the pod that is not editable. 
+
+A copy of the file with your changes is saved in a temporary location as shown above. 
+
+You can then delete the existing pod by running the command: 
+
+kubectl delete pod webapp 
+
+ 
+ 
+
+Then create a new pod with your changes using the temporary file 
+
+kubectl create -f /tmp/kubectl-edit-ccvrq.yaml 
+
+ 
+ 
+
+2. The second option is to extract the pod definition in YAML format to a file using the command 
+
+kubectl get pod webapp -o yaml > my-new-pod.yaml 
+
+Then make the changes to the exported file using an editor (vi editor). Save the changes 
+
+vi my-new-pod.yaml 
+
+Then delete the existing pod 
+
+kubectl delete pod webapp 
+
+Then create a new pod with the edited file 
+
+kubectl create -f my-new-pod.yaml 
+
+ 
+ 
+
+Edit Deployments 
+
+With Deployments you can easily edit any field/property of the POD template. Since the pod template is a child of the deployment specification,  with every change the deployment will automatically delete and create a new pod with the new changes. So if you are asked to edit a property of a POD part of a deployment you may do that simply by running the command 
+
+kubectl edit deployment my-deployment 
+
+ 
+
+k get daemonsets --all-namespaces 
+
+ 
+
+ 
+
+Run the command ps -aux | grep kubelet and identify the config file - --config=/var/lib/kubelet/config.yaml. Then check in the config file for staticPodPath. 
+
+First idenity the kubelet config file: 
+
+root@controlplane:~# ps -aux | grep /usr/bin/kubelet 
+root      3668  0.0  1.5 1933476 63076 ?       Ssl  Mar13  16:18 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.2 
+root      4879  0.0  0.0  11468  1040 pts/0    S+   00:06   0:00 grep --color=auto /usr/bin/kubelet 
+root@controlplane:~#  
+
+From the output we can see that the kubelet config file used is /var/lib/kubelet/config.yaml 
+ 
+ 
+Next, lookup the value assigned for staticPodPath: 
+
+root@controlplane:~# grep -i staticpod /var/lib/kubelet/config.yaml 
+staticPodPath: /etc/kubernetes/manifests 
+root@controlplane:~#  
+
+As you can see, the path configured is the /etc/kubernetes/manifests directory. 
+
+ 
+
+ 
+
+ 
+
+kubectl run --restart=Never --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml 
+
+kubectl run --restart=Never --image=busybox:1.28.4 static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml 
+
+First, let's identify the node in which the pod called static-greenbox is created. To do this, run: 
+ 
+
+root@controlplane:~# kubectl get pods --all-namespaces -o wide  | grep static-greenbox 
+default       static-greenbox-node01                 1/1     Running   0          19s     10.244.1.2   node01       <none>           <none> 
+root@controlplane:~# 
+
+From the result of this command, we can see that the pod is running on node01. 
+ 
+ 
+
+Next, SSH to node01 and identify the path configured for static pods in this node. 
+ 
+Important: The path need not be /etc/kubernetes/manifests. Make sure to check the path configured in the kubelet configuration file. 
+
+root@controlplane:~# ssh node01  
+root@node01:~# ps -ef |  grep /usr/bin/kubelet  
+root        4147       1  0 14:05 ?        00:00:00 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9 
+root        4773    4733  0 14:05 pts/0    00:00:00 grep /usr/bin/kubelet 
+ 
+root@node01:~# grep -i staticpod /var/lib/kubelet/config.yaml 
+staticPodPath: /etc/just-to-mess-with-you 
+ 
+root@node01:~#  
+
+Here the staticPodPath is /etc/just-to-mess-with-you 
+ 
+ 
+
+Navigate to this directory and delete the YAML file: 
+
+root@node01:/etc/just-to-mess-with-you# ls 
+greenbox.yaml 
+root@node01:/etc/just-to-mess-with-you# rm -rf greenbox.yaml  
+root@node01:/etc/just-to-mess-with-you# 
+
+Exit out of node01 using CTRL + D or type exit. You should return to the controlplane node. Check if the static-greenbox pod has been deleted: 
+
+root@controlplane:~# kubectl get pods --all-namespaces -o wide  | grep static-greenbox 
+root@controlplane:~#  
+
+ 
+ 
+
+ 
+
+Kubectl create configmap  my-schedule-name –from-file=/root/scedular/configmap.yaml -n kube-system 
+
+ 
+
+It is used to create a configmap 
+
+Update the image command: 
+
+Kubectl set image deploy name simpleweb=imageversion:234 
+
+ 
+
+kubectl replace --force -f /tmp/kubectl-edit-3656584209.yaml 
+
+creating a pod wih temp file and then it will be deleted 
+
+Kube-controller-manager  --pod—evction-timeout==5m0s 
+
+ 
+
+ 
+
+Kubectl ge all –all-namespaces  -o yaml >  all-deploy-services.yaml 
+
+ 
+
+Sanpshot save db 
+
+Snapshot status db 
+
+For cluster upgrade process we use these commands 
+
+ 
+
+Kubectl drain nodename 
+
+ 
+
+ apt-get upgrade –y kubeadm 1.12.0.00 
+
+Apt-get upgrade –y kubelet 1.12.0.00 
+
+Kube adm upgrade node config –kubelet-version 1.12.0.00 
+
+Systemctl restart kubelet 
+
+Working with ETCDCTL 
+
+ 
+ 
+
+etcdctl is a command line client for etcd. 
+
+ 
+ 
+
+In all our Kubernetes Hands-on labs, the ETCD key-value database is deployed as a static pod on the master. The version used is v3. 
+
+To make use of etcdctl for tasks such as back up and restore, make sure that you set the ETCDCTL_API to 3. 
+
+ 
+ 
+
+You can do this by exporting the variable ETCDCTL_API prior to using the etcdctl client. This can be done as follows: 
+
+export ETCDCTL_API=3 
+
+On the Master Node: 
+
+ 
+ 
+
+To see all the options for a specific sub-command, make use of the -h or --help flag. 
+
+ 
+ 
+
+For example, if you want to take a snapshot of etcd, use: 
+
+etcdctl snapshot save -h and keep a note of the mandatory global options. 
+
+ 
+ 
+
+Since our ETCD database is TLS-Enabled, the following options are mandatory: 
+
+--cacert                                                verify certificates of TLS-enabled secure servers using this CA bundle 
+
+--cert                                                    identify secure client using this TLS certificate file 
+
+--endpoints=[127.0.0.1:2379]          This is the default as ETCD is running on master node and exposed on localhost 2379. 
+
+--key                                                      identify secure client using this TLS key file 
+
+ 
+ 
+
+ 
+ 
+
+Similarly use the help option for snapshot restore to see all available options for restoring the backup. 
+
+etcdctl snapshot restore -h 
+
+For a detailed explanation on how to make use of the etcdctl command line tool and work with the -h flags, check out the solution video for the Backup and Restore Lab. 
+
+ 
+
+Before perfomring anycommand for ETCD then you should use this commnd before that 
+
+ 
+
+ETCDCTL_API=3 etcdctl snapshot 
+
+ 
+
+Or  
+
+ 
+
+Export ETCDCTL_API=3   it is use for those command not use every time may be 
+
+Certificate authenticator: 
+
+Kubectl get csr  > getting the certificate signing request  
+
+Kubectl certificate approve csrname > example is prasad 
+
+Kubectl certificate deny csrname 
+
+Kubectl config files 
+
+ 
+
+*** in this we have the three section in yaml  
+
+Clsuters 
+
+Context 
+
+Users 
+
+ 
+
+Kubectl get config view 
+
+Kubectl get config use-context admin@production   
+
+-> above command use the privious config source access to the same source accees for the admin@production env because the all access are move to the those user using config 
+
+ 
+
+Kubectl get configs –help  
+
+-> it give the detail and here is some screenshot 
+
+ 
