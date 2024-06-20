@@ -1,0 +1,183 @@
+  
+
+Name 
+
+ResourceGroupName 
+
+Subscription 
+
+FileSystem 
+
+Size 
+
+Used 
+
+Avail 
+
+UsedPercentage 
+
+MountedOn 
+
+ahuse21hdpn01 
+
+ahuse21rg 
+
+DigitateSaaSCustomer 
+
+/dev/sda2 
+
+30G 
+
+23G 
+
+6.8G 
+
+78% 
+
+/ 
+
+ahuse21hpnd04 
+
+ahuse21rg 
+
+DigitateSaaSCustomer 
+
+/dev/sdc1 
+
+32G 
+
+23G 
+
+7.2G 
+
+76% 
+
+/ignio 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+ahuse15hpdd01 
+
+ahuse15rg 
+
+DigitateSaaSCustomer 
+
+/dev/sda2 
+
+30G 
+
+24G 
+
+5.7G 
+
+81% 
+
+/ 
+
+ahusw24hpdd02 
+
+ahusw24rg 
+
+DigitateSaaSCustomer 
+
+/dev/sdc1 
+
+252G 
+
+183G 
+
+57G 
+
+77% 
+
+/ignio 
+
+ahusw24hpdd03 
+
+ahusw24rg 
+
+DigitateSaaSCustomer 
+
+/dev/sdc1 
+
+252G 
+
+184G 
+
+57G 
+
+77% 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Step 1 :  search vm name aheurw1hdpn01 in azure portal 
+
+Step 2 : Connect to Vm through Bastion like <<window>> 
+
+Step 3: open putty and copy private Ip address from VM and paste in putty then connect with ignio credential 
+
+ 
+
+/note/****Once connected to the VM via PuTTY, you can use command-line tools like df and du to check disk usage and identify large files or directories. 
+
+Use commands like du -h --max-depth=1 / to list the sizes of directories in the root filesystem 
+
+*****/note/ 
+
+Step 4: Df -h then we got list  here we got  the list of diretory  here we check the version of the diretory you can use  the latest version those directory. 
+
+Step 5: if some condition we use this command 
+
+/ignio/hadoop-3.1.4/bin/hdfs dfs -rm -r /tmp/hadoop-yarn/staging/hbase/.staging 
+
+Step 6: In some cases authenticity was rejected due to authenticity due to security reason at time u can use this   
+
+Step 7: then we use  0)ll may be if requires 1)cd hadoop-3.1.4/etc/security/   2) klist -kt hdfs.service.keytab  
+
+              3) kinit -kt hdfs.service.keytab hdfs/ahuse21hpnd04.inignio.com@AHUSE21RG.COM 
+
+Step 8: we use 
+
+/ignio/hadoop-3.1.4/bin/hdfs dfs –ll /tmp/hadoop-yarn/staging/hbase/.staging 
+
+ 
+
+/ignio/hadoop-3.1.4/bin/hdfs dfs -rm -r /tmp/hadoop-yarn/staging/hbase/.staging 
+
+ 
+
+ 
+
+*****Perform Cleanup: 
+
+You can navigate to directories with large disk usage and delete unnecessary files using command-line commands, such as rm for removing files and rmdir for removing directories. 
+
+******* 
+
+  
+
+Here it was  working  
+
+ 
