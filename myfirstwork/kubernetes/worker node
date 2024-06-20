@@ -1,0 +1,11 @@
+KUBLET: 
+
+It is main responsible in worker node because it act as captain in it is note  or register which one is in and out and which is responsible for whole in worker node 
+
+ 
+
+Kube-proxy: 
+
+In pods have communicate each and evary pod with in the node by their  ip address and here we get ip address by the following  service db  . 
+
+Here every pod contain kube-proxy because it can be search for services and it can be attach or getting that services and it can handle that service into that pods.   
