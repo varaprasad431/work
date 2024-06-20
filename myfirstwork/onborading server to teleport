@@ -1,0 +1,230 @@
+Description: 
+
+This is issue regarding some varibles are not correct in that pipeline  
+
+For this first of allyou can conncet the aks cluster then find the ns – of teleport  
+
+-check pods are running or not 
+
+-check if there any issue at cluster pods nodes else... 
+
+ 
+
+LOGIN into the azure then moves to azure devops pipeline and then changes in the variable section given the procedure to make the changes in the pipeline. 
+
+ 
+
+>there is pipeline deploy teleport you have to add the variables in it and run once done check on teleport 
+
+>to check the teleport namespace you can connect from azure portal to the cluster and kubectl get pods -n teleport and check the status 
+
+ 
+
+1.click on all services and then click on devops then click on then azure devops organization 
+
+Microsoft Azure 
+p Search resources, services, and docs (G*" 
+o 
+All services I DevOps 
+All 
+Favorites 
+Recents 
+Recommended 
+Categories 
+Al + machine learning 
+Analytics 
+Compute 
+Containers 
+Databases 
+Devops 
+General 
+Hybrid + multicloud 
+Identity 
+Integration 
+Internet of Thinas 
+Filter services 
+DevOps Tools 
+Chaos Experiments PREVIEW 
+Azure Deployment Environments 
+Azure Devops organizations 
+Azure Lab Services 
+Microsoft Dev Box 
+Projects 
+Test Base for Microsoft 365 
+Integration 
+co API Connections 
+o 
+Chaos Studio 
+Dev centers 
+DevTest Labs 
+Azure Load Testing 
+Network connections 
+-e Targets Management 
+API Management services 
+Then click on the my azure devops organization 
+
+All seNices > 
+Azure DevOps 
+Azure DevOps 
+Plan smarter, collaborate better, and 
+ship faster with a set of modern dev 
+services 
+My Azure Devops Organizations 
+Get started using Azure DevOps 
+Billing management far Azure DevOps 
+o 
+o 
+O 
+O 
+o el 
+Click on the containers 
+
+Azure DevOps Organizations 
+v dev.azure.com/DigitateSaaS (Member) 
+Projects 
+Containers 
+) ft. 
+Create new organization 
+Actions 
+Open in Visual Studio 
+Manage security 
+Browse extensions 
+Leave 
+Then click on the pipelines u got the all pipelines in your organization 
+
+Azure DevOps 
+Containers 
+Overview 
+Boards 
+Pipelines 
+Pipelines 
+Environments 
+Releases 
+Libran,' 
+Task groups 
+DigitateS33S 
+Containers 
+Pipelines 
+Q Search 
+Deployment groups 
+Artifacts 
+Pipelines 
+Recent All Runs 
+Recently run pipelines 
+Pipeline 
+HDisnightClusterHealth 
+AKSCLOUDAMQPPipeline 
+ObserveAvailabilityReport 
+CheckCordoned 
+CheckPodsHealth 
+Last run 
+#20230727.1 • Added clusterhealth.yaml 
+Manually triggered for feature 
+#20230727.1 • Update StorageSize810b.yaml for Azure Pipelines 
+Manually triggered for feature 
+#20230727.12 • Update observe-pipeline.yaml for Azure Pipelin... 
+O Scheduled fore main 
+#20230727.12 • Update observe-pipeline.yaml for Azure Pipelin... 
+O Scheduled fore main 
+#20230727.3 • Update observe-pipeline.yaml for Azure Pipelines 
+Manually triggered for main 
+tie 
+tie 
+tie 
+(3 
+tie 
+Filter pipelines 
+Just now 
+125 
+18m ago 
+13m 55 
+38m ago 
+40s 
+39m ago 
+9m 3s 
+43m ago 
+CJ 1m ICs 
+ 
+
+This issue is about teleport right  so then open the teleport pipeline 
+
+ultimatlx 
+- L'IgItallY••• 
+- Varaprasaa K. 
+home - M 
+Pipelines 
+You luoe 
+Deploy Teleport 
+Zoogle 1 
+Stages 
+ransl 
+Azure DevOps 
+Containers 
+Overview 
+Boards 
+Pipelines 
+Pipelines 
+Environments 
+Releases 
+Libran,' 
+Task groups 
+DigitateS33S 
+Containers 
+Provisioning 
+Q 
+Search 
+Deployment groups 
+Artifacts 
+Deploy Teleport 
+Runs Branches Analytics 
+Description 
+#20230727.2 • Update manual-app-deployment.yaml for AZ... 
+o 
+54Ø7c2b7 0 
+Manually triggered far 
+ma In 
+#20230727.1 • Update manual-app-deployment.yaml for AZ... 
+o 
+Manually triggered far 
+54Ø7c2b7 
+ma In 
+#20230726.7 • Updated CreateServiceUser.ps1 
+o 
+4b7ø4d3d O 
+Manually triggered far 
+ma In 
+#20230726.6 • Updated CreateServiceUser.ps1 
+o 
+4b7ø4d3d O 
+Manually triggered far 
+ma In 
+#20230726.5 • Updated CreateServiceUser.ps1 
+o 
+Manually triggered far 
+4b7ø4d3d 
+ma In 
+#20230726.4 • Update manual-app-deployment.yaml for AZ... 
+o 
+Manually triggered far 
+fb631683 
+ma In 
+tie 
+(3 
+tie 
+tie 
+tie 
+tie 
+tie 
+ago 
+475 
+ago 
+285 
+Yesterday 
+275 
+Yesterday 
+Yesterday 
+125 
+Yesterday 
+  
+
+Then the change the variable names at that then run the pipeline check the teleport was working or not  
