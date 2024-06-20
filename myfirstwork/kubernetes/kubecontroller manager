@@ -1,0 +1,17 @@
+IN KUBERNETES  controller  ,they have contain different types of controllers like node controller , deploy controller, pod controller etc  
+
+Here node controller is used to monitor the nodes each 5 seconds is it is not respond to  it then it was wait for 40 seconds for that after that it will be said that to controller manger then it pod is not responding and unreacble it will be go through the api -server  
+
+ 
+
+If pod was evition time was out in 5m and then it will move to focus on the replication controller because it was add the pod for replacing pod which was not rechble and they create a new 
+
+ 
+
+Watch pods 
+
+Notice time pods =5s 
+
+Evcation time pods= 40s 
+
+ 
