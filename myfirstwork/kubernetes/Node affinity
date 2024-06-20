@@ -1,0 +1,27 @@
+In kubernetes node affinity is you can use it instead of the node selector here these are useful to in the way of the spec section you can use  this one it more comfortable and  the it is the way to logically to everyone to easy to understand and  is it easly change at the spec section. 
+
+ That's why we use nodeaffinity in the yaml file. 
+
+Spec: 
+
+  Affinity: 
+
+      Nodeaffinity: 
+
+           Reqduring extion likee this it will  
+
+               Key 
+
+               Operator : in / not in 
+
+                Value: 
+
+For  above context we conclude that these are three types they below 
+
+
+ 
+
+ 
+
+
+ 
