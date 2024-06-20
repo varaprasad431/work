@@ -1,0 +1,469 @@
+Step1: login to the aks cluster 
+
+Step2: kubectl exec -it logviewer-b9ccfb4d-2pzbm -n asindc3dobsu1rg -- /bin/sh 
+
+C: \Users\2268961>kubect1 exec -it logviewer-b9ccfb4d-2pzbm -n asindc3dobsu1rg 
+/bin/sh 
+EØ8Ø8 18016 memcache.go:255] couldn't get resource list for external.metrics.k8s.io/v1beta1: 
+bin boot data dev etc home ignio-logs lib Iib32 Iib64 Iibx32 media mnt opt proc root run sbin 
+-30. log 
+log. gz 
+-07. log 
+log. gz 
+-08 . log 
+log. gz 
+-09. log 
+log. gz 
+-1B. log 
+-11. log 
+-12. log 
+-13 . log 
+-14. log 
+-15 . log 
+-16. log 
+-17. log 
+-18. log 
+-19. log 
+11 
+/bin/sh: 2: 11: not found 
+$ cd /ignio 
+/bin/sh: 3: cd: can't cd to /ignio 
+$ c /ignio-logs 
+/bin/sh: 4: c: not found 
+$ cd \ignio-logs 
+analytics -0 
+core-O 
+datalistener 
+datalistener 
+datalistener 
+datalistener 
+data listener -5dbd954c6f - gxpxl_buffers 
+data listener -5dbd954c6f -gxpxl_log 
+-59b875f5c5 
+-59b875f5c5 
+-59b875f5c5 
+-59b875f5c5 
+data listener-5cc69bbc7c -9p67n_buffers 
+data listener-5cc69bbc7c -9p67n_10g 
+-wxzrw buffers 
+-wxzrw_log 
+-xlfmg_buffers 
+- xlfmg_log 
+edge-Ø 
+grafana 
+grafana 
+grafana- 
+grafana- 
+grafana- 
+grafana 
+-68d8b95886-xmb5w 
+grafana 
+-7594dfcbd9-47jrd 
+grafana- 
+d5cf99599-f9gvj 
+grafana- 
+d5cf99599-hxrt8 
+grafana- 
+d5cf99599-p2rpj 
+httpd-77994976c6-zx1fz 
+httpd -7bbdcd7ccd -dpf6q 
+httpd-858ffdd986-w4fn5 
+jasper 
+jasper 
+jasper 
+jasper 
+jasper 
+Got empty 
+response for: external. metrics. k8s. io/vlbetal 
+tmp usr var 
+srv sys 
+-568564665b 
+-587d9d9d86-qv825 
+-587d9d9d86 
+-785f54fc65-jkf9f 
+-785f54fc65 
+-ftq5q 
+-tk2cg 
+-pqd2p 
+-58946b87c6 
+-5b8c594b58-9z5q2 
+66fc7d848d 
+68d8b95886-256sk 
+68d8b95886 
+-rqhfs 
+-plp2x 
+-dlzfb 
+solutions -0 
+uaa-Ø 
+ui-5968fdc784-n1vtk 
+u i -5968fdc 784- n Ivtk_apa che2_10gs 
+ui-7858465b77-147dm 
+ui-dbbb69959-85r2v 
+u i -dbbb69959-85 r2v_apa che2_10gs 
+$ cd uaa-o 
+/bin/sh : 
+7: cd: can't 
+$ cd uaa-Ø 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+actuator 
+cd to uaa-o 
+oversight-Ø 
+products -0 
+registry -0 
+-2023-07-27.0. 
+-2023-07-28.0. 
+-2023-07-29.0. 
+-2023-08-03.0. 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-09.0. log. gz 
+-10.0. log. gz 
+-11.0. log. gz 
+-12.Ø. log. gz 
+-13 .Ø.10g. gz 
+-14.0. log. gz 
+-15 .Ø.10g. gz 
+-16.0. log. gz 
+-17.Ø.10g. gz 
+-18.0. log. gz 
+-19.0. log. gz 
+-20.0. log. gz 
+-21.Ø. log. gz 
+-22.Ø. log. gz 
+. 2023-06 
+uaa -access 
+2023 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+. 2023-07 
+uaa -access 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+2023-07 
+uaa-access . 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+-2023-06 
+-2823-06 
+-2823-06 
+-2023-07 
+-2023 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-27.0. log. gz 
+-28.Ø. log. gz 
+-29 . 0. log. gz 
+-05 . 0. log. gz 
+-07.0. log. gz 
+-08 . 0. log. gz 
+-09 . 0. log. gz 
+-10.0. log. gz 
+-11.0. log. gz 
+-12.Ø. log. gz 
+-13 .Ø.10g. gz 
+-14.0. log. gz 
+-15 .Ø.10g. gz 
+-16.0. log. gz 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic . log 
+uaa-error- 
+uaa-error- 
+uaa-error- 
+uaa-error- 
+uaa -error- 
+uaa -error- 
+uaa-error- 
+uaa-error- 
+uaa-error- 
+2023-06 
+2023-07 
+2023-07 
+2023-07 
+2023-07 
+2023-07 
+2023-07 
+2023 
+2023-07 
+-30. Ø. log. gz 
+-01.0. log. gz 
+-02.0. log. gz 
+-03 . 0. log. gz 
+-04.0. log. gz 
+-05 . 0. log. gz 
+-06.0. log. gz 
+-07.0. log. gz 
+-08 . 0. log. gz 
+-2023-07 
+uaa -error 
+2023-07 
+uaa -error- 
+2023-07 
+uaa -error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa -error- 
+2023-07 
+uaa -error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-08 
+uaa-error- 
+-19.0. log. gz 
+-20.0. log. gz 
+-21.Ø. log. gz 
+-22.Ø. log. gz 
+-23 .Ø.10g. gz 
+-24.0. log. gz 
+-25 .Ø.10g. gz 
+-26.0. log. gz 
+-27.Ø.10g. gz 
+-28.Ø. log. gz 
+-29 . 0. log. gz 
+-30. Ø. log. gz 
+-31.Ø. log. gz 
+-01.0. log. gz 
+ 
+
+Step3:ls  above picture was decribe this command u understand better way 
+
+Step4:cd \ignio-logs 
+
+Step5:ls 
+
+Step6: cd uaa > because here we checking logs for uaa statefulset was down/notready 
+
+Step7:less uaa-error log   >> here we select the latest error # use shift D to stop buffering loop 
+
+actuator-2Ø23 -07-27 .Ø. 
+log. gz 
+2023-07 
+-24. log 
+uaa-access . 
+actuator-2Ø23-Ø7-28.Ø. 
+log. gz 
+. 2023-07 
+-25 . log 
+uaa -access 
+actuator. log 
+2023-07 
+-26. log 
+uaa-access . 
+uaa -access . 2023-06-27. log 
+2023-07 
+-27. log 
+uaa-access . 
+uaa -access . 2023-06-28. log 
+2023-07 
+-28. log 
+uaa-access . 
+uaa -access . 2023-06-29. log 
+-access. log 
+uaa 
+$ less uaa-error.log 
+$ select from uaa_changelog where version='5' ; 
+/bin/sh: 11: select: not found 
+$ select from uaa_changelog where version='5' 
+/bin/sh: 12: select: not found 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+uaa- 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+diagnostic 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-2023-07 
+-21.Ø. log. gz 
+-22 .Ø. log. gz 
+-23 .Ø.10g. gz 
+-24.0. log. gz 
+-25 .Ø.10g. gz 
+-26.0. log. gz 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa-error- 
+2023-07 
+uaa -error- 
+2023-07 
+uaa -error- 
+-2023-07 
+uaa -error 
+-13 .Ø.10g. gz 
+-14.0. log. gz 
+-15 .Ø.10g. gz 
+-16.0. log. gz 
+-17.Ø.10g. gz 
+-18.0. log. gz 
+uaa 
+uaa 
+uaa 
+-error -2023-08-06.0. log. gz 
+-error -2023-08-07.0. log. gz 
+-error. log 
+C: \Users\2268961>export PGHOST=asindc3dobsu1pgsq1v13. postgres . database.azure.com 
+' export' is not recognized as an internal or external command, 
+operable program or batch file. 
+C: \Users\2268961>export PGUSER=azureignio 
+' export' is not recognized as an internal or external command, 
+operable program or batch file. 
+C: PGPORT=5432 
+  
+
+Here I got this error   application error like migration failed 
+
+ 
+
+ 
+
+Step8:now connect to the postgres server through teleport  
+
+   Step I: 
+
+search the application in teleport using rg if it was not found then remove last words one by one 
+
+  Step II: after find first u can luch the pgweb first and next uat 
+
+Pgweb<<https://teleport.inignio.com/web/launch/asindc3dobsk1rg-pgweb.teleport.inignio.com/teleport.inignio.com/asindc3dobsk1rg-pgweb.teleport.inignio.com 
+
+ Uat<<https://digitate-observe-uat-registry.teleport.inignio.com> 
+
+ Here note  uat or any thing like registery after u can add this **/config/core/default** 
+
+ 
+
+Step III:  
+
+      Here we can find this file  
+
+      rdbms.ipaddress":"asindc3dobsu1pgsqlv13.postgres.database.azure.com    (hostname) 
+
+      Username: azureignio 
+
+       rdbms.schema":"ignio2dobsu1"(database) 
+
+   Password: PW4dobsuazdb 
+
+ 
+
+After login  u see this interface: 
+
+ 
+
+select * from uaa_changelog where version='5'; 
+
+delete from uaa_changelog where version='5'; 
+
+ 
+
+Then  
+
+Again go to the cluster restart the uaa then it was working by using these commands 
+
+kubectl rollout restart statefulset/uaa -n asindc3dobsu1rg 
