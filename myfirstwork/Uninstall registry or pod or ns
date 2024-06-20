@@ -1,0 +1,5 @@
+helm list -n <namespace> -> you will see the name registry-v1 for registry 
+
+helm uninstall registry-v1 -n <namespave> -> this will uninstall everything related to registry helm release in that namespace. 
+
+ 
