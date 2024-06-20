@@ -1,0 +1,52 @@
+Imperative: 
+
+In kubernetes or in genrally imperative means it will be explain the content each and every step detail view and the step which was done by you can be follow step by step and clearly then it is called imperative 
+
+ 
+
+Declarative : 
+
+In generally declarative means that can be declaring the content directly this means it can be help to give the information about the content simple and directly so then it is called declarative method 
+
+ 
+
+In kubernetes we have imperative as follows we use this commands: 
+
+
+ 
+
+Kubectl run --image=nginx   : it is used for creating a image 
+
+Kubectl create deployment --image=nginx nginx  : it is used to create a deployment using image 
+
+Kubectl expose deployment nginx --port   : it is used to expose the deployment  
+
+Kubectl   edit deployment nginx  : it is used to edit the deploy 
+
+Kubectl scale deployment  nginx -- replicas=6   : used to scale the replicas of particular deployment 
+
+Kubectl set image deployment nginx nginx=nginx:1.18     : used  to set image of deployemtns particular version 
+
+Kubectl  create -f nginx.yaml  : it used to create a pods ,replicaset,deployments etc using yaml file 
+
+Kubectl replace -f nginx,yaml  : it is used to edit the yaml file 
+
+Kubectl delete -f nginx.yaml   : it is used to delte the yaml 
+
+Kubectl lookup nginx.yaml   : it used to lookup 
+
+ 
+
+Nslookup (stands for “Name Server Lookup”) is a useful command for getting information from the DNS server. It is a network administration tool for querying the Domain Name System (DNS) to obtain domain name or IP address mapping or any other specific DNS record. It is also used to troubleshoot DNS-related problems.  
+
+Syntax of the `nslookup` command in Linux System 
+
+nslookup [option] [hosts] 
+
+ 
+
+From <https://www.geeksforgeeks.org/nslookup-command-in-linux-with-examples/>  
+
+ 
+
+ 
