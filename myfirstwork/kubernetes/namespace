@@ -1,0 +1,58 @@
+Namespace is generally  used as the  addresing the people who are the right person in group of different peoples. 
+
+ 
+
+Here in kubernetes same as we have different types of things  like pod service deployments replicasets etc… in that we have create a name for that to call them for our purpuse then we have seen below 
+
+NAMESPACE ISOLATION:   
+
+Genrally defult name space which create a user cluster then it was created and alternately we have 
+
+Kube-system and  kube-public namespace for safety resne when it will collapse. 
+
+ 
+
+NAMSPACE RESOURCE-LIMITS: 
+
+We have 1.default 2.dev 3.pod 
+
+ 
+
+DNS(DEFAULT NAMESPACE): 
+
+Mysql.connect("db-service") 
+
+Mysql.conncet("db-service.dev.svc.cluster.local") 
+
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
