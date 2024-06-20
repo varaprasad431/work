@@ -1,0 +1,19 @@
+Resource requirements  and limits are the useful for the time of the pods are running in the node  
+
+At  the time of the pod running in node they req different type of sizes  
+
+Cpu utilization and memory utilization  there at we have put different types of the requirements 
+
+There are 4 different types of cases there..... 
+
+Requirments and LImits   > here it use both 
+
+Requirments and LImits   > here it  use req only   ****IMPORTANT*** 
+
+Requirments and LImits   > here it use limits only 
+
+Requirments and LImits   > here it use no use  
+
+ 
+
+ 
