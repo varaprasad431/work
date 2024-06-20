@@ -1,0 +1,285 @@
+In kubernetes service play a role like middle between the two things like it create a interface or link to one frontend and backend and external things to connect. 
+
+The services actually have contain in this way of approch below: 
+
+I am  customer(laptop) conncet to the node through  ssh of the >curl http://10.4.40.02 it is the pod  address of which is inside the node of pod  
+
+ and anthor way it is… 
+
+If you go anthor way to conncet pod by customer by "30008"  -> it is act between us in  and here we use ssh to directly by the along time we have conncet with pod >curl http://198.168.0.10:30008 it is way to access the pod 
+
+ 
+
+ 
+
+SERVICE TYPES: 
+
+1.NODEPORT : here nodeport range was between 30000-32767 
+
+We can conncet the node to pod by using service  
+
+Node to pod 
+
+Node to pods 
+
+Nodes to pods 
+
+2.CLUSTER IP:  let assume we have provision the web application then we req :  
+
+ a.frontend 
+
+ b.backend 
+
+ c.redis{keyvalue store} 
+
+ 
+
+3.LOAD BALANCING : here to distrubute load balancing use  "Random Algoritham" 
+
+ 
+
+Here we service-definition.yaml    [NODEPORT] 
+
+apiVersion: v1 
+
+Kind: service 
+
+Metadata:  
+
+   name: myapp-service 
+
+Spec: 
+
+     type: Nodeport 
+
+     Ports: 
+
+         - TargetPort: 80 
+
+            port: 80 
+
+            nodePort: 30008 
+
+    selector:  
+
+        name: myapp 
+
+        tier:  frontend  
+
+ 
+
+Kubectl create -f service-deffinition.yaml 
+
+ 
+
+K get services 
+
+ 
+
+ 
+
+HERE service-definition [cluster-ip] 
+
+ 
+
+apiVersion: v1 
+
+Kind: service 
+
+Metadata:  
+
+   name: myapp-service 
+
+Spec: 
+
+     type: ClusterIP 
+
+     Ports: 
+
+         - TargetPort: 80 
+
+            port: 80 
+
+            
+
+    selector:  
+
+        name: myapp 
+
+        tier:  backend 
+
+Kubectl create -f service-defintion.yaml 
+
+ 
+
+apiVersion: v1 
+
+Kind: service 
+
+Metadata:  
+
+   name: myapp-service 
+
+Spec: 
+
+     type: LoadBalancer 
+
+     Ports: 
+
+         - TargetPort: 80 
+
+            port: 80 
+
+            nodeport: 30008 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ In kubernetes service play a role like middle between the two things like it create a interface or link to one frontend and backend and external things to connect. 
+
+The services actually have contain in this way of approch below: 
+
+I am  customer(laptop) conncet to the node through  ssh of the >curl http://10.4.40.02 it is the pod  address of which is inside the node of pod  
+
+ and anthor way it is… 
+
+If you go anthor way to conncet pod by customer by "30008"  -> it is act between us in  and here we use ssh to directly by the along time we have conncet with pod >curl http://198.168.0.10:30008 it is way to access the pod 
+
+ 
+
+ 
+
+SERVICE TYPES: 
+
+1.NODEPORT : here nodeport range was between 30000-32767 
+
+We can conncet the node to pod by using service  
+
+Node to pod 
+
+Node to pods 
+
+Nodes to pods 
+
+2.CLUSTER IP:  let assume we have provision the web application then we req :  
+
+ a.frontend 
+
+ b.backend 
+
+ c.redis{keyvalue store} 
+
+ 
+
+3.LOAD BALANCING : here to distrubute load balancing use  "Random Algoritham" 
+
+ 
+
+Here we service-definition.yaml    [NODEPORT] 
+
+apiVersion: v1 
+
+Kind: service 
+
+Metadata:  
+
+   name: myapp-service 
+
+Spec: 
+
+     type: Nodeport 
+
+     Ports: 
+
+         - TargetPort: 80 
+
+            port: 80 
+
+            nodePort: 30008 
+
+    selector:  
+
+        name: myapp 
+
+        tier:  frontend  
+
+ 
+
+Kubectl create -f service-deffinition.yaml 
+
+ 
+
+K get services 
+
+ 
+
+ 
+
+HERE service-definition [cluster-ip] 
+
+ 
+
+apiVersion: v1 
+
+Kind: service 
+
+Metadata:  
+
+   name: myapp-service 
+
+Spec: 
+
+     type: ClusterIP 
+
+     Ports: 
+
+         - TargetPort: 80 
+
+            port: 80 
+
+            
+
+    selector:  
+
+        name: myapp 
+
+        tier:  backend 
+
+Kubectl create -f service-defintion.yaml 
+
+ 
+
+apiVersion: v1 
+
+Kind: service 
+
+Metadata:  
+
+   name: myapp-service 
+
+Spec: 
+
+     type: LoadBalancer 
+
+     Ports: 
+
+         - TargetPort: 80 
+
+            port: 80 
+
+            nodeport: 30008 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
