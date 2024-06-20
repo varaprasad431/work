@@ -1,0 +1,43 @@
+In kubernetes we have best thing in that is because we can seen below 
+
+ 
+
+For suppose we want deploy a webserver in live environment at that time we required-- 
+
+Instances(pods)  it requires many but we don’t know how which was so it can be scaled up and down by replicaset or replicaset controller and after instance that are update because server application was updated thenwe want to updated that pods by using """ rolling update""  
+
+ 
+
+ROLLING update was working like one by one they update the instances because if you were update whole pods once then customers are facing failures issue with connect with them so we can rolling update. 
+
+ 
+
+ROLLINGBACK: if update were make any issue with that then we will make them rolling back on them because we will remove from them then it will works smoothly like before. 
+
+ 
+
+We can pause the updates and start the updates after issue was clear in that way deployment was doing. 
+
+ 
+
+For overall the before the pods,replicaset under deployment 
+
+ 
+
+Here some commnds 
+
+Kubctl create -f deployment-definition.yaml 
+
+Kubectl get deployment 
+
+Kubectl get replicaset 
+
+Kubectl get pods 
+
+ 
+
+Note: there is no difference between replicaset yaml file and deployment yaml file only one that is """kind""" 
+
+ 
+
+Kubectl get all command that was show the all commands in the cluster. 
