@@ -1,0 +1,43 @@
+In Generally cluster is made of different nodes. In that we have one Master node and one or more Worker nodes are available 
+
+ 
+
+IN monster is used for MANGE,PLAN,SCEDULAR,MONITOR NODES 
+
+ 
+
+In worker node is used to HOST APPLICATION AS CONTAINERS 
+
+ 
+
+ 
+
+Monster node : 
+
+1.ETCD CLUSTER: 
+
+Which stores the information about the cluster in type of KEY -VALUE Store 
+
+2.KUBE-APISERVER: 
+
+Which is responsible for the orchestration of the all operation within the cluster 
+
+3.KUBE CONTROLLER MANGER: 
+
+Ex-node controller and replication controller 
+
+4.KUBE-SCHEDULAR: 
+
+Which is responsible for scheduling application or contatiner on nodes 
+
+ 
+
+Worker node: 
+
+1.KUBELET: 
+
+Which is responsible for listen the instructions from the Kube API server and manage containers 
+
+2.KUBE-PROXY: which is help to communication between services within the cluster 
+
+3.CONTAINTER RUNTIME ENGINE (rkt)(DOCKER) 
