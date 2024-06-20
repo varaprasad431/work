@@ -1,0 +1,81 @@
+1.Manual scheduling: 
+
+Manual scheduling which is refer to this topic when we are assigned any object thing in our ways then it is called manually at that time of in the yaml file we have to add some object in that spec section or any section by manually then it is called as manual scheduling . 
+
+For example here in the spec section we have to add the node name as the nodeName01 then it is best example for the manual scheduling 
+
+ 
+
+ 
+
+2.Labels and Selectors: 
+
+In generally the thing which  it is labels means we have add a name or particular identification for the one object or objects  then it is called as labels . 
+
+Here in this YAML file we have labels in the metadata section at this section we mentioned labels there. 
+
+Selector : in generally the meaning of the selector we have to select the particular thing in whole content that was called  selector 
+
+In spec section we have to mentioned there selector at that for regarding the selected content for the our purpose then it is called as the selector  
+
+ 
+
+3.Taint and Tolerant :  
+
+ Taints are the opposite -- they allow a node to repel a set of pods. 
+
+ 
+
+Tolerations are applied to pods. Tolerations allow the scheduler to schedule pods with matching taints. Tolerations allow scheduling but don't guarantee scheduling: the scheduler also evaluates other parameters as part of its function. 
+
+ 
+
+ 
+
+Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints 
+
+ 
+
+ 
+
+You add a taint to a node using kubectl taint. For example, 
+
+kubectl taint nodes node1 key1=value1:NoSchedule 
+
+ 
+
+places a taint on node node1. The taint has key key1, value value1, and taint effect NoSchedule. This means that no pod will be able to schedule onto node1 unless it has a matching toleration. 
+
+To remove the taint added by the command above, you can run: 
+
+kubectl taint nodes node1 key1=value1:NoSchedule- 
+
+ 
+
+tolerations: 
+- key: "key1" 
+  operator: "Equal" 
+  value: "value1" 
+  effect: "NoSchedule" 
+
+ 
+
+ 
+
+4.Node affinity: 
+
+Run the command: kubectl label node node01 color=blue 
+
+It is used as to add a label to the particualr node 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
