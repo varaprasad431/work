@@ -1,0 +1,27 @@
+Step1:we have RG group name of issue then search on the rg name then get the AKS 
+
+                                                   or 
+
+Step2:search AKS in teleport with help of the RG name in that conncet to  cluster and then perform 
+
+Kubectl get ns 
+
+Kubectl get  pods –n monitoring   > then see the grafana 
+
+  
+
+All are running 
+
+ 
+
+Home - Grafana (inignio.com) 
+
+ 
+
+Grapana --username admin and pass strongpassword. 
+
+ 
+
+Notice: here we don't how to enable grafana for RG 
+
+ 
