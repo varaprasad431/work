@@ -1,0 +1,69 @@
+Generally replicaset was responsible for the when pod was not  reachble then it was create a Anthor pod for customer . 
+
+Replicaset contains replicas that means it was created how we mention how many replicas we want at the pods we requried then it will be always be avalible for their customer . 
+
+ 
+
+We have two parts in that  
+
+1.ReplicationController 
+
+2.replicatset 
+
+ 
+
+These both are seeing same but both are different in that below- 
+
+Replicationcontroller  contain apiversion :v1 
+
+And here we don’t have selector 
+
+ 
+
+Replicaset contain apiversion : apps/v1 
+
+ and here at spec section selector was compulsury and at selector section we  can get that data  from the  
+
+Pod which we create before regarding this in that at "metadata section" lables that are fetched from them to here selector section for here we can paste in "matchlables: under. 
+
+ 
+
+Replicas are mentioned in spec section and is used for scalability,loadblancing and high avalilibility . 
+
+ 
+
+ 
+
+Actually the whole concept of replicaset is used for monitoring the pods in node or cluster 
+
+ 
+
+***selector and labels**** 
+
+ 
+
+Labels are used to address the pod which one is under the node because in cluster node we have different type of pods there but at the replcaset don’t know which pod is they monitor in that time labels are useful for this addresing which pods they can monitor. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+SCALE: 
+
+In this we want update or replace the replicas in pod then we use scale command or scaling  
+
+We can  scale replicas in different ways below we can see those commands 
+
+ 
+
+Kubectl replace -f replicaset-definition.yaml 
+
+ 
+
+Kubectl scale --replicas=6 replicaset-definition.yaml 
+
+ kubectl scale --replicas=6 replicaset{type} myapp-replicaset{name} 
