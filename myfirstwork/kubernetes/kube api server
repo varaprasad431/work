@@ -1,0 +1,27 @@
+It is main management component  of the kubernetes service 
+
+ 
+
+It is primary for   
+
+1.authenticate 
+
+2.validate 
+
+3.retrive data 
+
+4.Update etcd 
+
+ 5.schedular 
+
+6.kubelet 
+
+ 
+
+To view api -server 
+
+Cat /etc/systemd/system/kube-api server 
+
+Ps -aux | grep api-server 
+
+ 
