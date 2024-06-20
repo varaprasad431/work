@@ -1,0 +1,21 @@
+Here we can use to monitor and logging the server 
+
+In kuberenetes we have  heapstar tool is used to monitor in starting now but it can be used the  ***Metrics server*** 
+
+In the way of the metric server firstly we need to install the metrics by this way 
+
+ 
+
+Minikube addons enable metric server 
+
+ 
+
+Kubectl top node   #used to view the monnitoring of the nodes 
+
+Kubectl  top pod  
+
+ 
+
+Kubectl logs nameof the pod 
+
+ 
