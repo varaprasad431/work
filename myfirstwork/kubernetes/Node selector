@@ -1,0 +1,17 @@
+Node selector are used to selecting pods for nodes then that time pods are easly identify that which node is suitable fot that pod . 
+
+Here  they  use these labels for that 
+
+Large 
+
+Medium  
+
+Too small 
+
+ In yaml file it is the spec section like below 
+
+Spec: 
+
+    Node selector: 
+
+        Size: large 
