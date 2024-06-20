@@ -1,0 +1,52 @@
+1.Edit email values which we took from ignio tenant request form once email is sent to saas devops check the aks-provision logic app if its successful.  
+
+https://portal.azure.com/#@onignio.com/resource/subscriptions/7834b107-7eaa-4aea-9083-2731f25ca9e8/resourceGroups/amusw22logicapp/providers/Microsoft.Logic/workflows/AKS-Provision/runHistory 
+
+2.check the aks provisioning pipeline. 
+ 
+
+https://dev.azure.com/DigitateSaaS/Containers/_build?definitionId=49  
+
+3.run hdinsight-user creation pipeline once  
+
+https://dev.azure.com/DigitateSaaS/Containers/_build?definitionId=71&_a=summary 
+
+get creds for keytab generation.get credentials from pranoti 
+ 
+
+4.run keytab generation pipeline once done verify in mc_rg in logs 1 gb fileshare also upload javakeystorev3.jks in security folder 
+
+5.run sql queries 
+ 
+select * from environment where key ilike '%zookeeper%'; 
+
+UPDATE public.environment SET value='zk2-use21h.hdinsight.onignio.com:2181,zk3-use21h.hdinsight.onignio.com:2181,zk4-use21h.hdinsight.onignio.com:2181' WHERE key= 'ignio.zookeeper.url'; 
+
+UPDATE public.environment SET value='/hbase-secure' WHERE key= 'ignio.zookeeper.dir.hbase'; 
+
+INSERT INTO public.environment(application, key, value) VALUES ('default', 'ignio.zookeeper.dir.hbase', '/hbase-secure'); 
+
+  
+
+select * from environment where key ilike '%hbase%'; 
+
+UPDATE public.environment SET value='uuviu1.ignio@HDINSIGHT.ONIGNIO.COM' WHERE key= 'ignio.db.hbase.kerberos.user.principal'; 
+
+UPDATE public.environment SET value='/ignio/kerberos/uuviu1.ignio.keytab' WHERE key= 'ignio.db.hbase.kerberos.user.keytab'; 
+
+ 
+
+> Check the peering is done or not . If it is not done do it with the help of honey. 
+
+6.from ignio upgrade sharepoint check if hdinsight version is mentioned and trigger sharepoint for customer with required ignio version 
+
+7.once app-upgrade pipeline is completed  
+you can ask yash to add entries 
+kubectl get svc –A | grep ingress gateway 
+
+8.once entries added you can run app gateway script 
+
+9.add dns entry in onignio.com 
+10.add License config in customer portal. 
+
+ 
