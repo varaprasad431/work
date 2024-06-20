@@ -1,0 +1,13 @@
+It is responsible for scheduling pods and nodes 
+
+It is schedule which pod moves to which particular node becoz of their avalibility . 
+
+Kubelet is the captain of that ship and it was also useful to crete a pod 
+
+ 
+
+Here it can be schedular by filtering and match that which best to it when compare the whole avalibility destination  
+
+ 
+
+ 
