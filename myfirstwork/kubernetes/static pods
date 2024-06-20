@@ -1,0 +1,35 @@
+I Static PODs Vs Daemonsets 
+Static PODs 
+Created by the Kubelet 
+DaemonSets 
+Created by Kube-APl server 
+(DaemonSet Controller) 
+Deploy Control Plane components as Deploy Monitoring Agents, Logging 
+Agents on nodes 
+Static Pods 
+Ignored by the Kube-Scheduler 
+ 
+
+ 
+
+ps -aux | grep kubelet 
+
+ 
+
+ 
+
+ 
+
+Run the command ps -aux | grep kubelet and identify the config file - --config=/var/lib/kubelet/config.yaml. Then check in the config file for staticPodPath. 
+
+ 
+
+ 
+
+kubectl run --restart=Never --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml 
+
+ 
+
+ 
+
+ 
