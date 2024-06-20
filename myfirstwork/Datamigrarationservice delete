@@ -1,0 +1,93 @@
+Step 1) go to Azure Database Migration Services 
+
+Step 2) add filter 
+
+  
+
+image
+  
+
+Step 3) got the list with DMS stopeed 
+
+Step 4) Remove lock of 1st 5 RG from vitthal 
+
+  
+
+Could you please remove lock for below RGs: 
+
+(Stopped DMS Cleanup) 
+
+  
+
+  
+
+asuse21admck2rg 
+
+asuse15aigik2rg 
+
+asuse15aosck2rg 
+
+asfncc1cbilk2rg 
+
+ascanc1cnrlk2rg 
+
+aseurn1ddpek4rg 
+
+  
+
+Step 5) then click 1st DMS and if they show completed then delete 
+
+image
+  
+
+  
+
+Step 6) if there is no database present we directly delete service 
+
+Step 7)Activity completed, you can re-enable lock. 
+
+ 
+
+image
+  
+
+Step 3) got the list with DMS stopeed 
+
+Step 4) Remove lock of 1st 5 RG from vitthal 
+
+  
+
+Could you please remove lock for below RGs: 
+
+(Stopped DMS Cleanup) 
+
+  
+
+  
+
+asuse21admck2rg 
+
+asuse15aigik2rg 
+
+asuse15aosck2rg 
+
+asfncc1cbilk2rg 
+
+ascanc1cnrlk2rg 
+
+aseurn1ddpek4rg 
+
+  
+
+Step 5) then click 1st DMS and if they show completed then delete 
+
+image
+  
+
+  
+
+Step 6) if there is no database present we directly delete service 
+
+Step 7)Activity completed, you can re-enable lock. 
+
+ 
