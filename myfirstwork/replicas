@@ -1,0 +1,50 @@
+Hi Team, 
+
+We have a use case for support team to restart ignio services. To test this usecase, we need environment like production which will have 2/3 pods for each ignio service. Need to scale up dev env temporarily. We may scale down the env again once testing is over. The env details are as below: 
+
+RgName : asusw21digik4rg 
+
+Namespace : asusw21digid4rg 
+
+Gajendra have approved the request over mail. Could you please do the needful. 
+
+  
+
+  
+
+  
+
+  
+
+Step1 ) take rg name connect to teleport 
+
+Step 2) kubectl get ns 
+
+Step3) kubectl get pod in dev env 
+
+Step 4)kubectl get hpa -n asusw21digid4rg 
+
+Step 5)kubectl edit scaledobject uaa -n asusw21digid4rg 
+
+Step6) edit pod  analytics, core,edge,products,registry, solutions,uaa,ui 
+
+Step 7) make min replicas and max replicas 2and save that notepad file 
+
+Step8) check 
+
+kubectl get hpa -n asusw21digid4rg 
+
+image
+  
+
+Step9)kubectl get pod -n asusw21digid4rg 
+
+  
+
+image
+  
+
+Step 10) kubectl get statefulset -n asusw21digid4rg 
+
+image
+ 
