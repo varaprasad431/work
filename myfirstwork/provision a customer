@@ -49,4 +49,39 @@ kubectl get svc –A | grep ingress gateway
 9.add dns entry in onignio.com 
 10.add License config in customer portal. 
 
+
+
+
+
+
+==========================================================================================
+
+
+
+ 1.Edit email values which we took from ignio tenant request form once email is sent to saas devops 
+saas.devops@onignio.com 
+check the aks-provision logic app if its successful.  
+ 
+
+https://portal.azure.com/#@onignio.com/resource/subscriptions/7834b107-7eaa-4aea-9083-2731f25ca9e8/resourceGroups/amusw22logicapp/providers/Microsoft.Logic/workflows/AKS-Provision/runHistory 
+
+2.check the aks provisioning pipeline. 
+ 
+
+3.run hdinsight-user creation pipeline once done get creds for keytab generation. 
+
+4.run keytab generation pipeline once done verify in mc_rg in logs 1 gb fileshare also upload javakeystorev3.jks in security folder 
+
+5.run sql queries 
+
+6.from ignio upgrade sharepoint check if hdinsight version is mentioned and trigger sharepoint for customer with required ignio version 
+
+7.once app-upgrade pipeline is completed } 
+Pipelines - Runs for ignio-upgrade-prod (azure.com) 
+you can ask yash to add entries 
+
+8.once entries added you can run app gateway script 
+
+9.add dns entry in onignio.com 
+
  
