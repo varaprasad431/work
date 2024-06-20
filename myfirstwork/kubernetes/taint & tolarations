@@ -1,0 +1,71 @@
+In generally we can use the taint and the tolarations for the purpose of the matching the data into the like label and its matching data 
+
+If suppose id card was printed by your photo then  you can use the id card for the one and only for the person in the company or it cannot be useble for the other persons  
+
+ 
+
+Anthor exmple of kubernetes are  LETS assmue we have 4pods and 3nodes but here 
+
+You can add taint to 1nodes then you add tolerent  to the 3pod here  how was the process was going on like this below 
+
+Steps: 
+
+>> pod was checking 1st node then it placed in node2 because node was not allow without tolleration 
+
+ After 
+
+>> 2pod was checking node1 and then placed into the 3node because node2 was filled with anthor pod 
+
+>> here 3pod was checking with the node1 then it placed because it was made up of  the toleration in that 
+
+>>after that 4pod was checking node 1 and then it place in node2 because you know why it happens 
+
+ 
+
+Taint: 
+
+You add a taint to a node using kubectl taint.For example, places a taint on node node1. The taint has key key1, value value1, and taint effect NoSchedule.This means that no pod will be able to schedule onto node1unless it has a matching toleration. To remove the taint added by the command above, you can run: You 
+
+ 
+
+Toleration: 
+
+It is appiled on the pod because it was source to find taint in the node scection for the scheduler of the pod into the node 
+
+ 
+
+Differnece: 
+
+difference between taints and tolerations? 
+
+Taints and tolerations are a mechanism that allows you to ensure that pods are not placed on inappropriate nodes. Taints are added to nodes, while tolerations are defined in the pod specification. When you taint a node, it will repel all the pods except those that have a toleration for that taint 
+
+ 
+
+Kubectl taint nodes node-name key-value:taint-effect  # here use taint –effect as  Noschedule|PreferNoschedule|Noexecute 
+
+ 
+
+Kubectl taint node node1 app=bluegreen:NoSchedule 
+
+ 
+
+ 
+
+Toleration yaml file: 
+
+In pod yaml file at the fourth section we have to add toleration in that after we have like this 
+
+Spec: 
+
+   toleration: 
+
+    -  Key:"app" 
+
+       Operator:"equal" 
+
+       Value: "blue" 
+
+       Effect:"Noschedule"     # here MUST AND should to use quatations 
+
+Kubectl describe node masternode |grep taint 
