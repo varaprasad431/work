@@ -1,0 +1,37 @@
+Creating configmaps two ways that are below 
+
+ 
+
+Creating it by imperative way and the way which is the directly you can  put those requirments in in a single command by like this way 
+
+In this it can be creating imperative and declarative 
+
+            -  
+
+'eonruguvaaps 
+ConfigMap 
+Imperative 
+kubectl create configmap 
+blue 
+<config-name> 
+prod 
+app-config --from-1itera1=APP_COLOR=b1ue 
+- -from-literal=APP MOD=prod 
+kubectl create configmap 
+<config-name> 
+kubectl create configmap \ 
+app-config 
+Create ConfigMap 
+ 
+
+Declarative 
+
+  
+
+ And finally 
+
+ 
+
+Creating it by the way of the  injection configmaps those are useful because at the pod defination they can add at the section of the enivironment section then 
+
+ 
