@@ -1,0 +1,61 @@
+Step1) go to RG and In RG go to database  then go to hdi cluster in azure portal …put rg name replace 'as ' as 'ah' then search in hdi cluster 
+
+Here,udi for uat and pdi for prod 
+
+Step2) connect inst01 
+
+Step3) Go to database and connect locally 
+
+Step4)Go to ambari home  
+
+   username - admin 
+
+   password -Winter2019@digisaas 
+
+Winter2020@digisaas 
+
+Winter2023@digisaas 
+
+Services-->Hosts-->head node-->copy url 
+
+Step 5) go to hub and copy 1st url 
+
+Step6) connect inst01 , 
+
+put username-- ssh sshuser@copyurl 
+
+password -- 
+
+Winter2019@digisaas 
+
+Winter2020@digisaas 
+
+Winter2023@digisaas 
+
+Step7)cd /usr/hdp/4.1.10.4/hadoop/bin 
+
+Step 8) cd /usr 
+
+Step9) ls 
+
+Step10)cd hdp 
+
+Step11) ls 
+
+Step 12) cd 4.1.10.4 
+
+Step 13) ls 
+
+Step 14) cd hadoop 
+
+Step15) ls 
+
+Step 16)cd bin 
+
+Step17)ls 
+
+Step 18)./hdfs dfs -du -h /hbase/data 
+
+Step 19) we got Hbase size 
+
+ 
