@@ -1,0 +1,20 @@
+#creating a lambda function for scheduling db instances of rds auto turn on and turn off below link will helpful
+https://repost.aws/knowledge-center/rds-stop-seven-days
+
+https://repost.aws/knowledge-center/rds-stop-seven-days-step-functions
+
+
+step:1   
+create  IAM policy
+step2:
+create a role and attach required polices
+step3:
+create a lambda functions to start the db instance
+
+step4:
+create a lambda function to stop the db instance
+
+step5:
+do pereform testing 
+step6:
+create a schedule in lambda functions
